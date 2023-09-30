@@ -13,7 +13,7 @@ const country = document.getElementById("country");
 const desc = document.getElementById("desc");
   
     async function fetchweather(name) {
-        const key = process.env.key;
+        const key = context.env.key;
         const response = await fetch("https://api.openweathermap.org/data/2.5/weather?appid="+key+"&units=metric&q="+name);
         const data = await response.json();
         console.log(data);
