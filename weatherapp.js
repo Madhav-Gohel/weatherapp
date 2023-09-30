@@ -14,7 +14,7 @@ const desc = document.getElementById("desc");
   
     async function fetchweather(name) {
         
-        const response = await fetch("https://api.openweathermap.org/data/2.5/weather?appid=${{ env.key }}&units=metric&q="+name);
+        const response = await fetch("https://api.openweathermap.org/data/2.5/weather?appid=${{ $os.getenv('key') }}&units=metric&q="+name);
         const data = await response.json();
         console.log(data);
         img.src = "https://openweathermap.org/img/wn/"+data.weather[0].icon+"@4x.png";
