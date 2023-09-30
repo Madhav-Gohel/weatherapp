@@ -1,7 +1,7 @@
 navigator.geolocation.getCurrentPosition((position) => {
     // position.coords.latitude, position.coords.longitude
     // let loc = "?lat="+position.coords.latitude + ","+position.coords.latitude;
-    // let q = document.getElementById("q").value = loc;
+    // let q = document.getElementById("q").value = loc;//
    
     fetchweatherlatlon(position.coords.latitude,position.coords.longitude);
   });
